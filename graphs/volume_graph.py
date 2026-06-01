@@ -1,7 +1,7 @@
 import pandas as pd
 import plotly.graph_objects as go
 
-def create_volume_graph():
+def create_volume_graph(df_volume):
     df_volume = pd.read_excel('Статистика_по_рынку_Банк_России.xlsx', sheet_name='Объем')
 
     df_volume["Премии (за квартал)"] = df_volume["Премии (за квартал)"] / 1000
@@ -14,7 +14,7 @@ def create_volume_graph():
         go.Bar(
             x=df_volume["Дата"],
             y=df_volume["Премии (за квартал)"],
-            name="Премии (за квартал) (млрд. руб.)"
+            name="Премии (за квартал) (млн. руб.)"
         )
     )
 
@@ -22,7 +22,7 @@ def create_volume_graph():
         go.Bar(
             x=df_volume["Дата"],
             y=df_volume["Выплаты (за квартал)"],
-            name="Выплаты (за квартал) (млрд. руб.)"
+            name="Выплаты (за квартал) (млн. руб.)"
         )
     )
 

@@ -22,7 +22,7 @@ def create_structure_graph():
         ))
 
     fig_structure.update_layout(
-        title='Доля страховых компаний по годам (2017–2025)',
+        title='Доля страховых компаний по годам',
         barmode='stack',
         height=600,
         yaxis=dict(title='Доля (%)'),
