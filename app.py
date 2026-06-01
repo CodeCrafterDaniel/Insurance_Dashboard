@@ -70,7 +70,7 @@ if page == "Обзор страхового рынка":
 
     mode_false = st.radio(
         "Режим отображения",
-        ["Composition", "Dynamics"],
+        ["on", "Dys"],
         horizontal=True
     )
 
